@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>usb_cam_calibration</name>
+  <version>0.1.1</version>
+  <description>Calibration of an usb camera using usb_cam and camera_calibration ROS packages</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <maintainer email="andreu@beta-robots.com">Andreu Corominas-Murtra</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <license>BSD</license>
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <url type="website">https://gitlab.com/beta-robots/usb_cam_calibration</url>
+
+  <!-- Author tags are optional, mutiple are allowed, one per tag -->
+  <author email="andreu@beta-robots.com">Andreu Corominas-Murtra</author>
+
+  <!-- Build tool and dependencies-->
+  <depend>usb_cam</depend>
+  <depend>camera_calibration</depend>
+</package>

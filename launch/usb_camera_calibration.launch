@@ -1,0 +1,42 @@
+<launch>
+	<!-- User arguments -->
+	<arg name="video_device"  default="/dev/video0" />
+	<arg name="show_image"  default="false" />
+
+	<!-- camera capture -->
+	<node
+		name="usb_cam"
+		pkg="usb_cam"
+		type="usb_cam_node"
+		output="screen" >
+		<param name="video_device" value="$(arg video_device)" />
+		<param name="image_width" value="640" />
+		<param name="image_height" value="480" />
+		<param name="pixel_format" value="yuyv" />
+		<param name="camera_frame_id" value="usb_cam" />
+		<param name="io_method" value="mmap"/>
+	</node>
+
+	<!-- camera calibration -->
+	<node
+		name="camera_calibration"
+		pkg="camera_calibration"
+		type="cameracalibrator.py"
+		output="screen"
+		args="--size 8x6 --square 0.054 image:=/usb_cam/image_raw camera:=usb_cam">
+	</node>
+
+	<!-- display raw image -->
+	<group if="$(arg show_image)">
+		<node
+			name="image_view"
+			pkg="image_view"
+			type="image_view"
+			respawn="false"
+			output="screen">
+			<remap from="image" to="/usb_cam/image_raw"/>
+			<param name="autosize" value="true" />
+		</node>
+	</group>
+
+</launch>
