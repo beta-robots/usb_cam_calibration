@@ -19,6 +19,6 @@ $ roslaunch usb_cam_calibration usb_camera_calibrated.launch video_device:="/dev
 
 ### Tutorial and references
 - http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
-- https://docs.opencv.org/2.4/doc/tutorials/calib3d/camera_calibration/camera_calibration.html
+- http://wiki.ros.org/image_pipeline/CameraInfo
 - https://docs.opencv.org/2.4/_downloads/pattern.png
 
