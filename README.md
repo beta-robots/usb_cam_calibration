@@ -3,8 +3,8 @@ Calibration of an usb camera using [usb_cam](http://wiki.ros.org/usb_cam) and [c
 
 ### Dependencies
 ```shell
-sudo apt-get install ros-kinetic-camera-calibration
-sudo apt-get install ros-kinetic-usb-cam
+sudo apt-get install ros-melodic-camera-calibration
+sudo apt-get install ros-melodic-usb-cam
 ```
 
 ### To calibrate a camera
